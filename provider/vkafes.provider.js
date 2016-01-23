@@ -11,6 +11,8 @@
 		
 		me.raise = function(ex, scope, ask_comment){	
 			me.exceptionData.exception = {message: ex.message, stack:ex.stack};
+			me.exceptionData.location = window.location.toString();
+			me.exceptionData.user_agent = window.navigator.userAgent;
 			me.exceptionData.scope = {};
 			if(ask_comment == null)
 				ask_comment = me.config.ask_comment;
@@ -36,8 +38,10 @@
 		
 		me.exceptionData = {
             exception: null,
+			location: null,
+			user_agent:null,
             scope: null,
-			user_comment: null
+			user_comment: null,
         };
 		
 		me.config = {
