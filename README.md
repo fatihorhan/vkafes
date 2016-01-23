@@ -80,6 +80,6 @@ Hatalar node api/node/api.js komutunu çalıştırdığınız dizindeki errors.d
 GELİŞTİRİCİLER
 --------------
  
- - Fatih ORHAN(@fatihorhan)
+ - Fatih ORHAN (@fatihorhan)
  - Volkan ZEYTUN (@volkanzeytun)
  - Kadri KARAGÖZ (@kadrikaragoz)
