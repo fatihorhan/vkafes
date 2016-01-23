@@ -5,7 +5,20 @@ Browserda oluşan javascript hatalarını yakalayıp serverda loglanmasına yard
 
 Oluşan hatanın exception, scope değişkenleri ve URL'ini paketleyip istenen HTTP API'ye POST eder.
 
-İlerki Hedefler
+İleriki Hedefler
 ================
 - Server'da .NET, nodejs ve rails'da API hazırlanması ve oluşan hataların görüntülemesi için panel.
 - Hatalara öncelik verilmesi ve çözülüp çözülmediğinin takibi.
+
+Kullanımı
+=========
+git clone https://github.com/fatihorhan/vkafes.git
+cd vkafes
+node api/node/api.js
+
+http://localhost:4444/todo.html adresinden angular örnek projesini görün.
+http://localhost:4444/pure.html adresinden saf javascript örnek projesini görün.
+
+Gereksinimler
+==============
+Node.js
