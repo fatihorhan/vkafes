@@ -10,7 +10,7 @@ app.use(function error(err, req, res, next) {
 });
 
 app.post('/saveerror', function(req, res){
-	log(req.body);
+	console.log(req.body);
 });
 
 app.listen(4444); 
