@@ -76,3 +76,10 @@ Hataları HTTP JSON API üzerinden aşağıdaki adresten görebilirsiniz:
 http://localhost:4444/errors
 
 Hatalar node api/node/api.js komutunu çalıştırdığınız dizindeki errors.db sqlite3 dosyasında.
+
+GELİŞTİRİCİLER
+--------------
+ 
+ - Fatih ORHAN(@fatihorhan)
+ - Volkan ZEYTUN (@volkanzeytun)
+ - Kadri KARAGÖZ (@kadrikaragoz)
