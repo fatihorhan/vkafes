@@ -9,3 +9,4 @@ Oluşan hatanın exception, scope değişkenleri ve URL'ini paketleyip istenen H
 ================
 - Server'da .NET, nodejs ve rails'da API hazırlanması ve oluşan hataların görüntülemesi için panel.
 - Hatalara öncelik verilmesi ve çözülüp çözülmediğinin takibi.
+- Test 
