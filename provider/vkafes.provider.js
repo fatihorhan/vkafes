@@ -10,14 +10,20 @@
 		var me = this;
 		
 		me.raise = function(ex, scope, ask_comment){	
-			me.exceptionData.exception = ex;
-			me.exceptionData.scope = scope;
+			me.exceptionData.exception = {message: ex.message, stack:ex.stack};
+			me.exceptionData.scope = {};
 			if(ask_comment == null)
 				ask_comment = me.config.ask_comment;
 			if(ask_comment==true)
 				me.exceptionData.user_comment = prompt("Hata oluştu ve gönderilecek. Eklemek istedğiniz notunuz var mı?");
 			console.log(me.exceptionData);
-			me.config.http.post(me.config.api_url, me.exceptionData);
+			console.log(scope);
+			for(var a in scope){
+				if(a.toString().substring(0,1)!="$")
+					me.exceptionData.scope[a] = JSON.stringify(scope[a]);
+			}
+			
+			me.config.http.post(me.config.api_url, JSON.stringify(me.exceptionData));
 		}
 		
 		me.guard = function(method){
