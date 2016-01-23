@@ -27,6 +27,12 @@ app.use(function error(err, req, res, next) {
   res.send(500);
 });
 
+app.all('*', function(req, res, next) {
+   res.header("Access-Control-Allow-Origin", "*");
+   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+   next();
+});
+
 app.post('/saveerror', function(req, res){
 	var ev = req.body;
 	console.log("Message : " + ev.exception.message);
