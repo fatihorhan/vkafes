@@ -7,7 +7,7 @@
 
     /* @ngInject */
     function jsErrorHandlerConfig(jsErrorHandlerProvider) {
-        jsErrorHandlerProvider.config.api_url = "/handle_error";
+        jsErrorHandlerProvider.config.api_url = "/saveerror";
         jsErrorHandlerProvider.config.ask_comment = true;
     }
 })();

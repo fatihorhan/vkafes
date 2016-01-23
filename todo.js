@@ -1,5 +1,5 @@
 angular.module('todoApp', ['vkafes'])
-  .controller('TodoListController', function(jsErrorHandler, $scope) {
+  .controller('TodoListController', function(jsErrorHandler, $scope, $http) {
     var todoList = this;
     todoList.todos = [
       {text:'learn angular', done:true},

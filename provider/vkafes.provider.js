@@ -17,6 +17,7 @@
 			if(ask_comment==true)
 				me.exceptionData.user_comment = prompt("Hata oluştu ve gönderilecek. Eklemek istedğiniz notunuz var mı?");
 			console.log(me.exceptionData);
+			me.config.http.post(me.config.api_url, me.exceptionData);
 		}
 		
 		me.guard = function(method){
@@ -36,10 +37,12 @@
 		me.config = {
 			api_url: null,
 			ask_comment: true,
+			http:null,
 		};
 		        
         // Service
-        this.$get = function() {
+        this.$get = function($http) {
+			me.config.http = $http;
             return me;
         };
     }
