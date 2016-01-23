@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('app')
-        .config(vkafesConfig);
+        .module('vkafes')
+        .config(jsErrorHandlerConfig);
 
     /* @ngInject */
-    function vkafesConfig(vkafesProvider) {
+    function jsErrorHandlerConfig(jsErrorHandlerProvider) {
         console.log("dasd");
     }
 })();
