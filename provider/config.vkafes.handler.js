@@ -7,6 +7,7 @@
 
     /* @ngInject */
     function jsErrorHandlerConfig(jsErrorHandlerProvider) {
-        console.log("dasd");
+        jsErrorHandlerProvider.config.api_url = "/handle_error";
+        jsErrorHandlerProvider.config.ask_comment = true;
     }
 })();

@@ -10,7 +10,7 @@ angular.module('todoApp', ['vkafes'])
 	  try{
 	  	x();
 	} catch(e){
-		jsErrorHandler.raise(e);
+		jsErrorHandler.raise(e, false);
 	}
 	  todoList.todoText = '';
     };
