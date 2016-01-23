@@ -70,6 +70,7 @@ Hatayı yakaladınız yerde gönderilmesi için vkafes'e verin:
 Hataların Görüntülenmesi
 =========================
 Gönderilecek olan hata aşağıdaki gibidir:
+[[https://github.com/fatihorhan/vkafes/blob/master/logdata.png|alt=logdata]]
 
 Hataları HTTP JSON API üzerinden aşağıdaki adresten görebilirsiniz:
 http://localhost:4444/errors
