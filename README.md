@@ -11,5 +11,3 @@ Oluşan hatanın exception, scope değişkenleri ve URL'ini paketleyip istenen H
 - Hatalara öncelik verilmesi ve çözülüp çözülmediğinin takibi.
 - Test 
 vz
-
-asd
