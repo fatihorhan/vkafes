@@ -10,7 +10,9 @@ app.use(function error(err, req, res, next) {
 });
 
 app.post('/saveerror', function(req, res){
-	console.log(req.body);
+	var ev = req.body;
+	console.log("Mesaj : " + ev.exception.message);
+	console.log("Stack Trace : " + ev.exception.stack);
 });
 
 app.listen(4444); 
