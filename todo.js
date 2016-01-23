@@ -1,5 +1,5 @@
 angular.module('todoApp', ['vkafes'])
-  .controller('TodoListController', function(jsErrorHandler) {
+  .controller('TodoListController', function(jsErrorHandler, $scope, $http) {
     var todoList = this;
     todoList.todos = [
       {text:'learn angular', done:true},
@@ -10,7 +10,7 @@ angular.module('todoApp', ['vkafes'])
 	  try{
 	  	x();
 	} catch(e){
-		jsErrorHandler.raise(e, false);
+		jsErrorHandler.raise(e, $scope, false);
 	}
 	  todoList.todoText = '';
     };
@@ -24,10 +24,13 @@ angular.module('todoApp', ['vkafes'])
     };
  
     todoList.archive = function() {
-      var oldTodos = todoList.todos;
-      todoList.todos = [];
-      angular.forEach(oldTodos, function(todo) {
-        if (!todo.done) todoList.todos.push(todo);
-      });
+		jsErrorHandler.guard(function(){
+      	  var oldTodos = todoList.todos;
+      		todoList.todos = [];
+      		angular.forEach(oldTodos, function(todo) {
+        		if (!todo.done) todoList.todos.push(todo);
+      	  });
+		  x();
+	  });
     };
   });
