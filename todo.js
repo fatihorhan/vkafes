@@ -1,5 +1,5 @@
-angular.module('todoApp', [])
-  .controller('TodoListController', function() {
+angular.module('todoApp', ['vkafes'])
+  .controller('TodoListController', function(jsErrorHandler) {
     var todoList = this;
     todoList.todos = [
       {text:'learn angular', done:true},
@@ -10,7 +10,7 @@ angular.module('todoApp', [])
 	  try{
 	  	x();
 	} catch(e){
-		console.log(e);
+		jsErrorHandler.raise(e);
 	}
 	  todoList.todoText = '';
     };
